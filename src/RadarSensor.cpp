@@ -7,6 +7,6 @@ void RadarSensor::run(){
     while(running){
         int objectDistance = rand()%100 + 1;
         awareness-> updateRadar(objectDistance);
-        std::this_tread::sleep_for(std::chrono::seconds(2));
+        std::this_thread::sleep_for(std::chrono::seconds(2));
     }
 }

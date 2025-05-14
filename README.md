@@ -1,14 +1,19 @@
 # CMDcontrol
 
 
-## Descripción
-Este proyecto simula un sistema básico de mando y control naval en C++, inspirado en los requisitos de Thales. Contiene sensores simulados (radar), una interfaz de comando y un módulo de conciencia situacional que procesa los datos.
+## 
 
 ## Tecnologías
 - C++17
 - Multithreading (`std::thread`, `std::mutex`)
 - Patrón Observer simplificado
 - Estructura modular orientada a componentes
+
+## Coses a mirar
+-Atomic
+-Mutex
+-lock_guard
+-namespaces(espacios de nombre)
 
 ## Cómo compilar
 ```bash

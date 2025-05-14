@@ -14,6 +14,7 @@
 -Mutex
 -lock_guard
 -namespaces(espacios de nombre)
+-constructors i lista de inicializacion de miembros
 
 ## Cómo compilar
 ```bash

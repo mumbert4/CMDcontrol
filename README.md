@@ -10,11 +10,13 @@
 - Estructura modular orientada a componentes
 
 ## Coses a mirar
--Atomic
--Mutex
--lock_guard
--namespaces(espacios de nombre)
--constructors i lista de inicializacion de miembros
+- Atomic
+- Mutex
+- lock_guard
+- namespaces(espacios de nombre)
+- constructors i lista de inicializacion de miembros
+- threads(bastant)
+- unique_ptr, make_unique, punters vs referencies...
 
 ## Cómo compilar
 ```bash

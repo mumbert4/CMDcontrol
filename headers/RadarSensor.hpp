@@ -5,11 +5,12 @@
 
 class RadarSensor {
     public:
-        RadarSensor(SituationAwareness* sa ): awareness(sa), running(true){}
+        RadarSensor(SituationAwareness* sa , int id): awareness(sa), running(true), id(id){}
         void run();
-    
+        void stopRunning();
     private:
         SituationAwareness* awareness;
         std::atomic<bool> running;
+        int id;
 
 };

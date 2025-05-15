@@ -7,20 +7,32 @@
 
 int main() {
     SituationAwareness awareness;
-    RadarSensor radar(&awareness);
-    CommandInterface commandInterface(&awareness);
+    
+    
 
-    std::thread sensorThread([&](){
-        radar.run();
-    });
+    std::vector<std::unique_ptr<RadarSensor>>sensors;
+    std::vector<std::thread> sensorThreads;
 
+    
+    for(int i = 0; i < 10; ++i){
+        sensors.emplace_back(std::make_unique<RadarSensor>(&awareness,i));
+        sensorThreads.emplace_back(&RadarSensor::run, sensors.back().get());
+    }
+
+    CommandInterface commandInterface(&awareness, sensors);
+    
     std::thread commandThread([&](){
         commandInterface.run();
     });
 
-    sensorThread.join();
     commandThread.join();
+    std::cout<<"COMMAND THREAD JOINED"<<std::endl;
 
+    
+    
+    
+
+    
     return 0;
 
 }

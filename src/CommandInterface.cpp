@@ -11,7 +11,11 @@ void CommandInterface::run(){
             awareness-> showStatus();
         }
         else if(input == "exit"){
-            std::cout<<"Exitinf command interface.\n";
+            std::cout<<"Exiting command interface.\n";
+            for(auto &t: sensors){
+                t->stopRunning();
+                std::cout<<"Stopping radar"<<std::endl;
+            }
             break;
         }
     }

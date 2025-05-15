@@ -14,9 +14,18 @@
 - Mutex
 - lock_guard
 - namespaces(espacios de nombre)
-- constructors i lista de inicializacion de miembros
 - threads(bastant)
-- unique_ptr, make_unique, punters vs referencies...
+- punters vs referencies...
+
+
+## Coses mirades:
+- Constructors i lista de inicializacion de miembros -> basicament com montar o fer constructors d'una forma mes rapida i llegible entenc
+- Threads:
+    - .join() -> lo que fa es esperar a que es thread acabi per seguir amb el main, es una forma de garantir sincronitzacio
+    - 
+- unique_ptr -> punter inteligent(administra automaticament memoria, no hem de fer delete ni coses aixi, ho fa totsol)
+    - std::unique_ptr<RadarSensor> r = std::make_unique<RadarSensor>(&awareness, i);
+
 
 ## Cómo compilar
 ```bash

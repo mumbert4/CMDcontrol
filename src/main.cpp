@@ -20,7 +20,7 @@ int main() {
     }
 
     CommandInterface commandInterface(&awareness, sensors);
-    
+
     std::thread commandThread([&](){
         commandInterface.run();
     });
@@ -28,6 +28,10 @@ int main() {
     commandThread.join();
     std::cout<<"COMMAND THREAD JOINED"<<std::endl;
 
+    for (auto &t: sensorThreads){
+        t.join();
+    }
+    std::cout<<"Sensor threads joined"<<std::endl;
     
     
     

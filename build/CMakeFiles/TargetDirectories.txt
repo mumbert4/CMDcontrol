@@ -1,0 +1,3 @@
+/home/miquel/Documentos/CMDcontrol/build/CMakeFiles/naval_cmd_control_sim.dir
+/home/miquel/Documentos/CMDcontrol/build/CMakeFiles/edit_cache.dir
+/home/miquel/Documentos/CMDcontrol/build/CMakeFiles/rebuild_cache.dir
